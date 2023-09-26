@@ -1,14 +1,8 @@
-function getFormvalue(event) {
-    event.preventDefault();
+function getFormvalue() {
+    const form = document.getElementById("form1");
 
-  
-    var firstName = document.getElementById("firstName").value;
-    var lastName = document.getElementById("lastName").value;
+    const firstName = form.elements.fname.value;
+    const lastName = form.elements.lname.value;
 
-   
-    alert("First Name: " + firstName + "\nLast Name: " + lastName);
+    alert(`${firstName} ${lastName}`);
 }
-
-
-var form = document.getElementById("myForm");
-form.addEventListener("submit", getFormValue);
